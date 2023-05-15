@@ -121,15 +121,12 @@ export function getAllPostPaths(path?: string[]): Array<Array<string>> {
 }
 
 export function getAllPosts<T extends keyof PostType>(fields: Array<T>) {
-  const data = getAllPostPaths()
+  return getAllPostPaths()
     .map((slug) => getPostByPath(slug, fields))
+}
 
-  if ("date" in fields) {
-    return data.sort((post1, post2) =>
-      // @ts-ignore
-      (post1.date < post2.date ? -1 : 1)
-    )
-  } else {
-    return data
-  }
+export function sortPosts<T extends Pick<PostType, "date">>(posts: Array<T>) {
+  return posts.sort((post1, post2) =>
+    (post1.date < post2.date ? 1 : -1)
+  )
 }

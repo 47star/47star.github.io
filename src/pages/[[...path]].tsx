@@ -7,7 +7,8 @@ import {
   getCategoryByPath,
   getCategoryTree,
   getPathType,
-  getPostByPath
+  getPostByPath,
+  sortPosts
 } from "@/lib/api"
 import {PostType} from "@/interfaces/post"
 import Container from "@/components/layout/container"
@@ -156,14 +157,16 @@ export async function getStaticProps({params}: Params) {
           path: category.path,
           name: category.name,
           icon: category.icon || null,
-          posts: getAllPostPaths(category.path)
-            .map((path) => getPostByPath(path, [
-              "path",
-              "title",
-              "description",
-              "date",
-              "coverImage",
-            ]))
+          posts: sortPosts(
+            getAllPostPaths(category.path)
+              .map((path) => getPostByPath(path, [
+                "path",
+                "title",
+                "description",
+                "date",
+                "coverImage",
+              ]))
+          )
         }
       }
     }
