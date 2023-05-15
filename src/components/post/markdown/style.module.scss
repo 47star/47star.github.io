@@ -46,11 +46,10 @@
     @apply rounded-lg overflow-hidden;
     @apply bg-white bg-gradient-to-t from-zinc-100/40 to-zinc-100/20;
     @apply border border-zinc-200;
-    @apply shadow-md shadow-zinc-500/10;
     @apply px-2 py-1;
-    @apply align-[0.2em];
+    @apply align-[0.1em];
 
-    @apply text-xs;
+    @apply text-xs font-medium;
 
     font-family: "JetBrains Mono", "Pretendard Variable", serif;
   }
@@ -64,7 +63,10 @@
     * {
       word-break: unset;
       white-space: unset;
-      font-family: "JetBrains Mono", "Pretendard Variable", serif;
+      font: {
+        family: "JetBrains Mono", "Pretendard Variable", serif;
+        weight: 500;
+      }
     }
   }
 }
