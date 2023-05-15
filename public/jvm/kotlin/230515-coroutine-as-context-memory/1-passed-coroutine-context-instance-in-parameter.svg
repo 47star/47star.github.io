@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1196 764" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xml:space="preserve"
+     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.16738,0,0,0.746094,0,0)">
+        <rect x="0" y="0" width="1024" height="1024" style="fill:rgb(30,31,34);"/>
+    </g>
+  <g transform="matrix(0.99998,0,0,1,-6.45238,-305.273)">
+        <text x="257.755px" y="697.656px"
+              style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(179,174,96);fill-opacity:0.6;">@Nullable</text>
+    <text x="257.755px" y="737.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(207,142,109);fill-opacity:0.6;">public static final</text>
+    <text x="657.755px" y="737.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">Object</text>
+    <text x="797.755px" y="737.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(86,168,245);fill-opacity:0.6;">sleep_VtjQ1oo</text>
+    <text x="1057.76px" y="737.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">(</text>
+    <text x="337.755px" y="777.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(207,142,109);fill-opacity:0.6;">long</text>
+    <text x="437.755px" y="777.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">duration,</text>
+    <text x="337.755px" y="817.656px"
+          style="font-family:'JetBrainsMono-Bold', 'JetBrains Mono', monospace;font-weight:700;font-size:33.333px;fill:rgb(179,174,96);">@NotNull</text>
+    <text x="517.755px" y="817.656px"
+          style="font-family:'JetBrainsMono-Bold', 'JetBrains Mono', monospace;font-weight:700;font-size:33.333px;fill:rgb(188,190,196);">Continuation $completion</text>
+    <rect x="337.755" y="822.822" width="180" height="1.667" style="fill:rgb(179,174,96);"/>
+    <rect x="517.755" y="822.822" width="480" height="1.667" style="fill:rgb(188,190,196);"/>
+    <text x="257.755px" y="857.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">) {</text>
+    <text x="317.755px" y="897.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">// ...</text>
+    <g transform="matrix(33.3333,0,0,33.3333,277.755,937.656)">
+        </g>
+    <text x="257.755px" y="937.656px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">}</text>
+    </g>
+  <g transform="matrix(1.00002,0,0,1,-17.8958,-224.607)">
+        <text x="268.521px" y="380.607px"
+              style="font-family:'JetBrainsMono-Bold', 'JetBrains Mono', monospace;font-weight:700;font-size:33.333px;fill:rgb(207,142,109);">suspend</text>
+    <text x="428.521px" y="380.607px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(207,142,109);fill-opacity:0.6;">fun</text>
+    <text x="508.521px" y="380.607px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(86,168,245);fill-opacity:0.6;">sleep</text>
+    <text x="608.521px" y="380.607px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">(duration: Duration) {</text>
+    <rect x="268.521" y="385.773" width="140" height="1.667" style="fill:rgb(207,142,109);"/>
+    <text x="348.521px" y="420.607px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">//...</text>
+    <g transform="matrix(33.3333,0,0,33.3333,288.521,460.607)">
+        </g>
+    <text x="268.521px" y="460.607px"
+          style="font-family:'JetBrainsMono-Regular', 'JetBrains Mono', monospace;font-size:33.333px;fill:rgb(188,190,196);fill-opacity:0.6;">}</text>
+    </g>
+  <g transform="matrix(1.00013,0,0,1,-92.7322,45.5363)">
+        <g transform="matrix(25,0,0,25,283.033,156.681)">
+        </g>
+    <text x="218.897px" y="156.681px"
+          style="font-family:'Pretendard-Medium', 'Pretendard';font-weight:500;font-size:25px;fill:white;">K<tspan
+      x="233.827px 248.182px 257.203px " y="156.681px 156.681px 156.681px ">otl</tspan>in</text>
+    </g>
+  <g transform="matrix(0.999554,0,0,1,-91.5076,353.893)">
+        <g transform="matrix(25,0,0,25,271.79,156.681)">
+        </g>
+    <text x="218.897px" y="156.681px"
+          style="font-family:'Pretendard-Medium', 'Pretendard';font-weight:500;font-size:25px;fill:white;">Ja<tspan
+      x="245.118px 258.216px " y="156.681px 156.681px ">va</tspan></text>
+    </g>
+</svg>
