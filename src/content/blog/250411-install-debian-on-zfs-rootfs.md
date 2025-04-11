@@ -2,7 +2,7 @@
 icon: "💽"
 title: "ZFS rootfs에 Debian 12 설치"
 description: "OpenZFS를 통하여 ZFS 루트 파일 시스템에 Debian 12 Bookworm 설치하기"
-pubDate: "2025-04-11T16:15:00.000Z"
+pubDate: "2025-04-11T07:15:00.000Z"
 ---
 
 ## 책임의 한계
