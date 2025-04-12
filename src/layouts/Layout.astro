@@ -5,9 +5,9 @@ import Navigation from "../components/Navigation.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
 const {
-  title = SITE_TITLE,
-  description = SITE_DESCRIPTION,
-  image = "https://repository-images.githubusercontent.com/402295162/5af53d5c-adcf-4a74-8e6c-83fd0c3164b6",
+    title = SITE_TITLE,
+    description = SITE_DESCRIPTION,
+    image = "https://repository-images.githubusercontent.com/402295162/5af53d5c-adcf-4a74-8e6c-83fd0c3164b6",
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -44,6 +44,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+        <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "1558dc442bea4b39b97a2fbbb8e01473"}'
+        ></script>
     </head>
     <body>
         <div class="flex flex-col min-h-dvh">
