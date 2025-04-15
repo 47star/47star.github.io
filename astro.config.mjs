@@ -28,6 +28,6 @@ export default defineConfig({
   },
 
   build: {
-    assets: "_nano",
+    assets: "_rvl",
   },
 });
