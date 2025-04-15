@@ -4,29 +4,29 @@ import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "../layouts/Layout.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <Layout>
-	<section class="w-full max-w-3xl">
-		<ul class="w-full flex flex-col gap-6">
+	<section class=":uno: w-full max-w-3xl">
+		<ul class=":uno: w-full flex flex-col gap-6">
 			{
 				posts.map((post) => (
-					<li class="border border-gray-200">
+					<li class=":uno: border border-gray-200">
 						<a
 							href={`/${post.id}/`}
-							class="relative block w-full overflow-hidden hover:underline"
+							class=":uno: relative block w-full overflow-hidden hover:underline"
 						>
-							<div class="flex flex-col gap-2 flex-1 p-6">
-								<h2 class="text-xl font-semibold break-keep">
+							<div class=":uno: flex flex-col gap-2 flex-1 p-6">
+								<h2 class=":uno: text-xl font-semibold break-keep">
 									{post.data.title}
 								</h2>
-								<p class="text-sm font-medium text-gray-500">
+								<p class=":uno: text-sm font-medium text-gray-500">
 									<FormattedDate date={post.data.pubDate} />
 								</p>
 							</div>
-							<div class="absolute -bottom-10 -right-10 text-9xl text-blue-700/10 font-emoji">
+							<div class=":uno: absolute -bottom-10 -right-10 text-9xl text-blue-700/10 font-emoji">
 								{post.data.icon}
 							</div>
 						</a>

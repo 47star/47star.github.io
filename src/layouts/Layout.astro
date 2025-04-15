@@ -5,9 +5,9 @@ import Navigation from "../components/Navigation.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
 const {
-  title = SITE_TITLE,
-  description = SITE_DESCRIPTION,
-  image = "https://repository-images.githubusercontent.com/402295162/5af53d5c-adcf-4a74-8e6c-83fd0c3164b6",
+    title = SITE_TITLE,
+    description = SITE_DESCRIPTION,
+    image = "https://repository-images.githubusercontent.com/402295162/5af53d5c-adcf-4a74-8e6c-83fd0c3164b6",
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -51,9 +51,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         ></script>
     </head>
     <body>
-        <div class="flex flex-col min-h-dvh">
+        <div class=":uno: flex flex-col min-h-dvh">
             <Navigation />
-            <main class="flex-1 flex flex-col items-center w-full px-6 py-12">
+            <main
+                class=":uno: flex-1 flex flex-col items-center w-full px-6 py-12"
+            >
                 <slot />
             </main>
             <Footer />
