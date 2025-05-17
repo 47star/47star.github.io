@@ -95,7 +95,7 @@ chmod +x ./cuda_12.8.1_570.124.06_linux.run
 * Architecture: x86_64
 * Distribution: Debian
 * Version: 12
-* installer Type: deb (local)
+* Installer Type: deb (local)
 
 설치가 완료되면 아래 명령줄로 cuDNN 버전을 검증할 수 있습니다.
 
@@ -119,8 +119,6 @@ chmod +x ./*.run
 ./NVIDIA-Linux-x86_64-570.133.20.run --silent
 ./cuda_12.8.0_570.86.10_linux.run --silent --toolkit
 
-rm -f ./*.run
-
 nvidia-smi
 ```
 ```shell
@@ -137,8 +135,6 @@ dpkg -i cudnn-local-repo-debian12-9.10.0_1.0-1_amd64.deb
 cp /var/cudnn-local-repo-debian12-9.10.0/cudnn-*-keyring.gpg /usr/share/keyrings/
 apt-get update -y
 apt-get install -y cudnn
-
-rm -f ./*.run ./*.deb
 
 nvidia-smi
 ```
