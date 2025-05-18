@@ -2,7 +2,7 @@
 icon: "🐧"
 title: "시스템 컨테이너에서 NVIDIA GPU 공유"
 description: "시스템 컨테이너(LXC)에서 NVIDIA GPU 자원을 공유하는 방법"
-pubDate: "2025-05-18T21:33:00+09:00"
+pubDate: "2025-05-17T21:33:00+09:00"
 ---
 
 ## 프롤로그
