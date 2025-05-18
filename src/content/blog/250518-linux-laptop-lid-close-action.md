@@ -77,7 +77,7 @@ systemd-logind에서 지원하는 주요 동작[^logind-action]은 다음과 같
 * `suspend`: 절전 모드로 전환합니다.
 * `hibernate`: RAM을 디스크에 저장한 다음 시스템을 종료합니다. (Windows의 최대 절전 모드와 유사)
 * `hybrid-sleep`: RAM을 디스크에 저장한 다음 절전 상태를 유지합니다.
-* `suspend-then-hibernate`: ``suspend` 전환 후, 일정 시간이 지나면 자동으로 `hibernate`로 전환합니다.
+* `suspend-then-hibernate`: `suspend` 전환 후, 일정 시간이 지나면 자동으로 `hibernate`로 전환합니다.
 * `sleep`: 대기 모드로 전환합니다.
 * `lock`: 로그온된 계정을 잠급니다.
 
