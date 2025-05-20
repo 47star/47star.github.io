@@ -124,6 +124,25 @@ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3130
 iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 3131
 ```
 
+### SNI를 통한 예외 호스트 추가
+운영체제 Root CA 인증서 저장소를 따르지 않거나 의도적으로 SSL Pinning을 적용한 애플리케이션 등 HTTPS 프록시 적용이 곤란한 호스트는 예외 호스트에 등재해야 합니다. SNI를 이용하면 암호화된 연결의 호스트 정보를 알 수 있습니다. Squid SSL Bump에서는 이를 이용한 예외 처리를 지원합니다.  
+
+`/etc/squid/ignore-host.list`에 다음과 같이 정의합니다. 아래에서는 SSL Pinning을 적용하는 대표적인 소비자용 소프트웨어인 KakaoTalk을 예시로 들었습니다.
+```
+.talk-pilsner.kakao.com
+```
+
+`/etc/squid/squid.conf`에 다음과 같은 정의를 추가합니다.
+```
+acl ignore_host dstdomain "/etc/squid/ignore-host.list"
+ssl_bump splice ignore_host
+```
+
+변경 사항을 반영합니다.
+```shell
+systemctl reload squid
+```
+
 ## 클라이언트 구성하기
 클라이언트에서는 다음과 같은 명령줄로 `ca-certificates` 패키지를 설치하고, Squid 서버를 위해서 생성한 인증서 값을 복사, 그런 다음 Root CA 인증서를 업데이트하여 시스템에 반영합니다.
 ```shell
@@ -149,25 +168,6 @@ cat <<EOF | tee /etc/pki/ca-trust/source/anchors/squid.crt
 EOF
 
 update-ca-trust
-```
-
-### SNI를 통한 예외 호스트 추가
-운영체제 Root CA 인증서 저장소를 따르지 않거나 의도적으로 SSL Pinning을 적용한 애플리케이션 등 HTTPS 프록시 적용이 곤란한 호스트는 예외 호스트에 등재해야 합니다. SNI를 이용하면 암호화된 연결의 호스트 정보를 알 수 있습니다. Squid SSL Bump에서는 이를 이용한 예외 처리를 지원합니다.  
-
-`/etc/squid/ignore-host.list`에 다음과 같이 정의합니다. 아래에서는 SSL Pinning을 적용하는 대표적인 소비자용 소프트웨어인 KakaoTalk을 예시로 들었습니다.
-```
-.talk-pilsner.kakao.com
-```
-
-`/etc/squid/squid.conf`에 다음과 같은 정의를 추가합니다.
-```
-acl ignore_host dstdomain "/etc/squid/ignore-host.list"
-ssl_bump splice ignore_host
-```
-
-변경 사항을 반영합니다.
-```shell
-systemctl reload squid
 ```
 
 ## 적용 결과
