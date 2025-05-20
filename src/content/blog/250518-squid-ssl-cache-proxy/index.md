@@ -178,12 +178,15 @@ Squid에서 캐시를 하는 경우가 그렇지 않은 경우를 명세해둔 �
 ### 캐싱이 가능한 서비스
 * Debian APT
 * Fedora Packages(Yum, DNF)
-* Python PyPI: 단, Astral UV 패키지 관리자를 사용하는 경우 `--native-tls` 옵션을 사용해야 합니다. 그렇지 않으면 신뢰할 수 없는 인증서에 관한 오류 발생합니다.
+* Python PyPI
 
 ### 캐싱이 불가능한 서비스
 * GitHub Release: 요청의 인증 파라미터에 의한 캐시 무시
 * Docker Registry(`docker.io`): `no-cache` 헤더에 의한 캐시 무시
-* HuggingFace Hub: 요청의 인증 파라미터에 의한 캐시 무시
+
+### 서비스별 문제 해결 방법
+* Astral UV:`--native-tls` 옵션을 사용해야 합니다.
+* Hugging Face: `REQUESTS_CA_BUNDLE` 환경 변수에 Root CA 인증서 경로가 제공되어야 합니다. (예: `/usr/local/share/ca-certificates/squid.crt`)
 
 ## 에필로그
 위 목적이 완전히 달성되기 위해서는 모든 애플리케이션이 Root CA Certificate, WPAD, 시스템 HTTP Proxy(PAC)을 잘 따라야 합니다. 그러나, 그렇지 않은 환경과 애플리케이션이 많기 때문에 지속적으로 모니터링해야 합니다. 인터넷 트래픽 부담을 덜기 위해서 관련 표준이 있으면 좋겠다고 생각했습니다.  
