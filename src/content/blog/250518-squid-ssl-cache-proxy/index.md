@@ -187,6 +187,7 @@ Squid에서 캐시를 하는 경우가 그렇지 않은 경우를 명세해둔 �
 ### 서비스별 문제 해결 방법
 * Astral UV:`--native-tls` 옵션을 사용해야 합니다.
 * Hugging Face: `REQUESTS_CA_BUNDLE` 환경 변수에 Root CA 인증서 경로가 제공되어야 합니다. (예: `/usr/local/share/ca-certificates/squid.crt`)
+* Anaconda(Miniconda): `~/.condarc`에 `ssl_verify: truststore`을 추가하면 됩니다. [Conda 23.9.0부터는 `ssl_verify: False` 옵션을 지원하지 않습니다.](https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/settings.html#ssl-verify-ssl-verification)
 
 ## 에필로그
 위 목적이 완전히 달성되기 위해서는 모든 애플리케이션이 Root CA Certificate, WPAD, 시스템 HTTP Proxy(PAC)을 잘 따라야 합니다. 그러나, 그렇지 않은 환경과 애플리케이션이 많기 때문에 지속적으로 모니터링해야 합니다. 인터넷 트래픽 부담을 덜기 위해서 관련 표준이 있으면 좋겠다고 생각했습니다.  
