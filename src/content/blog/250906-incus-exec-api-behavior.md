@@ -34,6 +34,27 @@ class IncusExecResponse:
 
 # ...
 
+async def consume_websocket_stream(self, url: str, encoding: str) -> list[str]:
+    ssl_context = ssl.create_default_context()
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
+
+    responses = []
+
+    async with websockets.connect(
+        uri = url, 
+        ssl = ssl_context, 
+        additional_headers = self.session.headers,
+    ) as websocket:
+        try:
+            while True:
+                response = await websocket.recv(False)
+                responses.append(response.decode(encoding))
+        except websockets.exceptions.ConnectionClosedError:
+            pass
+
+    return responses
+
 async def execute(self, instance: str, command: list[str], encoding: str = "euc-kr") -> list[str]:
     response = self.session.post(
         url = f"https://{self.config.host}/1.0/instances/{instance}/exec?project={self.config.project}&wait=10", 
