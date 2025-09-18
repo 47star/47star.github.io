@@ -1,4 +1,4 @@
-export const SITE_TITLE = "Lumière";
+export const SITE_TITLE = "DongHoon Yoo";
 export const SITE_DOMAIN = "blog.donghoon.net";
 export const SITE_DESCRIPTION = "Journey to the ultimate system";
 
