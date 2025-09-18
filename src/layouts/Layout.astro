@@ -2,12 +2,16 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import {
+    SITE_DESCRIPTION,
+    SITE_TITLE,
+    SITE_OPENGRAPH_IMAGE_URL,
+} from "../consts";
 
 const {
     title = SITE_TITLE,
     description = SITE_DESCRIPTION,
-    image = "https://repository-images.githubusercontent.com/402295162/5af53d5c-adcf-4a74-8e6c-83fd0c3164b6",
+    image = SITE_OPENGRAPH_IMAGE_URL,
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
