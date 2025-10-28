@@ -23,6 +23,8 @@ export default defineConfig({
     }),
   ],
 
+  prefetch: true,
+
   vite: {
     plugins: [tailwindcss()],
   },
